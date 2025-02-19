@@ -1,6 +1,5 @@
 {% set payment = module.payments | length %}
 {% set limit_payments = 11 - payment %}
-
 <div class="module module-payments p-3">
     <h4 class="mb-2"><i class="fa-solid fa-coins me-1"></i>{{ module.header }}</h4>
     {% if payment == 0 %}

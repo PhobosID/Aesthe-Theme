@@ -1,4 +1,3 @@
-
 {% set server = config("server-ip") %}
 {% set serverPORT = config("server-port") %}
 {% set discord = config("discord")%}
@@ -62,7 +61,7 @@
       <div class="header-splash">
          <div class="header-splash-overlay"></div>
       </div>
-      {% include "header_1.html" %}
+      {% include "header_1.twig" %}
       {% block content %}{% endblock %}
       <footer class="mt-5 mb-4">
           <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
@@ -163,8 +162,8 @@ let thisyear = document.getElementById("thisyear").innerHTML = new Date().getFul
       <script>
        document.getElementById('ip-copy').addEventListener('click', function() {
         Swal.fire({
-            title: 'Hello!',
-            text: 'You have copied the server IP',
+            title: 'IP Adress Copied!',
+            text: `Let's Start Playing!`,
             icon: 'success',
             confirmButtonText: 'Cool'
         });

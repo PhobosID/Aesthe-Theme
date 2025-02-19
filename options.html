@@ -1,11 +1,9 @@
 {% extends "layout.html" %}
-
 {% block content %}
-
 <div class="container option">
    <div class="row">
       <div class="col-md-3 col-12 sidebar">
-         {% include "header_2.html" %}
+         {% include "header_2.twig" %}
          {{ modules|raw }}
       </div>
       <div class="col-md-9 col-12 mainbar">
@@ -90,8 +88,5 @@
       </div>
    </div>
 </div>
-
-
-{% include "content_footer.html" %}
-
+{% include "footer.twig" %}
 {% endblock %}

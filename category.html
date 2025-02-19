@@ -3,7 +3,7 @@
 <div class="container cats">
    <div class="row">
       <div class="col-lg-3 col-12 sidebar">
-         {% include "header_2.html" %}
+         {% include "header_2.twig" %}
          {{ modules|raw }}
       </div>
       <div class="col-lg-9 col-12 mainbar mt-lg-0 mt-2">
@@ -31,7 +31,7 @@
                   {% endif %}
                </div>
                <div class="btn-holder d-flex justify-content-center align-items-center">
-                  <a href="javascript:void(0);" data-remote="/package/{{ package.id }}"
+                  <a href="/package/{{ package.id }}" data-remote="/package/{{ package.id }}"
                      class="btn btn-info toggle-modal me-2 drop-shadow"><i class="fa-solid fa-info"></i></a>
                   {% if package.basket %}
                   <a href="/checkout/packages/remove/{{ package.id }}"
@@ -48,7 +48,7 @@
          <div class="grid-packages p-4 position-relative">
             {% for package in category.packages %}
             <div class="package w-100 drop-shadow" id="package--{{ package.id }}">
-               <a class="package-img toggle-modal toggle-tooltip " href="javascript:void(0);" data-remote="/package/{{ package.id }}" title="{{ __("Click for more details") }}">
+               <a class="package-img toggle-modal toggle-tooltip " href="/package/{{ package.id }}" data-remote="/package/{{ package.id }}" title="{{ __("Click for more details") }}">
                <img src="{{ package.image.url }}" class="drop-shadow" alt="{{package.name}}" >
                </a>
                <div class="package-info mt-2">
@@ -62,7 +62,7 @@
                      <span class="price-actual">{{ package.price|money }} <small>{{ basket.currency }}</small></span>
                   </div>
                   <div class="package-buttons d-flex justify-content-center align-items-center">
-                     <a href="javascript:void(0);" data-remote="/package/{{ package.id }}"
+                     <a href="/package/{{ package.id }}" data-remote="/package/{{ package.id }}"
                         class="btn btn-info toggle-modal drop-shadow"><i class="fa-solid fa-info"></i></a>
                      {% if package.basket %}
                      <a href="/checkout/packages/remove/{{ package.id }}"
@@ -80,22 +80,5 @@
       </div>
    </div>
 </div>
-{% include "content_footer.html" %}
+{% include "footer.twig" %}
 {% endblock %}
-{#
-<div class="container login">
-   <div class="row">
-      <div class="col-md-3 col-12 sidebar">
-         {% include "header_2.html" %}
-         {{ modules|raw }}
-      </div>
-      <div class="col-md-9 col-12 mainbar">
-         <div class="login-info p-4 mb-2 position-relative">
-            <h4 class="mb-2">{{ __("Enter username") }}</h4>
-            <p class="mb-2">{{ __("Please enter your username to continue") }}</p>
-            {{ loginform|raw }}
-         </div>
-      </div>
-   </div>
-</div>
-#}

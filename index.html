@@ -3,14 +3,14 @@
 <div class="container">
    <div class="row">
       <div class="col-lg-3 col-12 sidebar">
-         {% include "header_2.html" %}
+         {% include "header_2.twig" %}
          {{ modules|raw }}
       </div>
       <div class="col-lg-9 col-12 mainbar index mt-lg-0 mt-2">
          <div class="desc position-relative p-4 mb-2">
             <div class="store-name mb-3">
                <span>Welcome to the official</span>
-               <h1>{{store.name}}</h1>
+               <h1>{{store.name}} Store!</h1>
             </div>
             {{ index.description|raw }}
          </div>
@@ -24,20 +24,20 @@
             <div class="p-4 refund-policy">
                <div class="mb-3">
                   <h4 class="mb-2"><i class="fa-solid fa-triangle-exclamation me-1"></i>Refund Policy</h4>
-                  <p>All payments are <b>final</b> and <b>non-refundable</b>. Attempting a chargeback or opening a PayPal dispute will result in <b>permanent</b> and <b>irreversible banishment</b> from all of our servers, and other stores.</p>
+                  <p>We offer no refund. By making a purchase through our store, you agree to the following refund policy:<br><br><b>1. All Sales Are Final</b><br>All purchases made on our store are considered donations to support the server. As such, all transactions are final, and we do not offer refunds under any circumstances.<br><br><b>2. Digital Goods</b><br>Since the items you receive are digital, intangible, and delivered instantly in-game, they cannot be "returned" or refunded.<br><br><b>3. Chargebacks and Disputes</b><br>Any chargebacks or payment disputes will result in an automatic and permanent ban from our server and store. If you have any issues with your purchase, please contact us directly so we can assist you.<br><br><b>4. Purchase Responsibility</b><br>Please ensure you are authorized to make the payment and have parental/guardian permission if applicable. We are not responsible for accidental or unauthorized purchases.<br><br>Your generosity helps keep the server running and ensures we can continue creating the best possible experience for our community. Thank you for your understanding and support!</p>
                </div>
-               <a class="btn toggle-modal w-100 drop-shadow" href="javascript:void(0);" data-remote="/terms"><i class="fa-solid fa-square-arrow-up-right me-1"></i>Terms & Conditions</a>
+               <a class="btn w-100 drop-shadow" href="/terms-and-conditions"><i class="fa-solid fa-square-arrow-up-right me-1"></i>Terms & Conditions</a>
             </div>
             <div class="p-4 privacy-policy">
                <div class="mb-3">
                   <h4 class="mb-2"><i class="fa-solid fa-user-shield me-1"></i>Privacy Policy</h4>
-                  <p>All information that is required on this webstore is <b>not shared</b> with any other third parties and is stored <b>securely</b>. All payments are processed via SSL enabled gateways and ensure that your payment details are secure.</p>
+                  <p>We value your privacy and are committed to keeping your personal information safe. Any information you provide on this webstore, including your name, email address, and payment details, is <b>securely</b> stored and <b>never shared</b> with third parties.<br><br>All transactions are processed through <b>SSL-encrypted</b> payment gateways, ensuring that your payment details remain protected at all times. We do not store or have access to your full payment information, as payments are handled securely by our trusted payment processors.<br><br>We retain your personal information only as long as necessary to fulfill your orders, comply with legal obligations, or resolve disputes. If you wish to have your data deleted, you may contact us to request its removal, subject to legal and operational requirements.<br><br>Our webstore may use cookies and similar technologies to improve your browsing experience, track site usage, and store your preferences. You can manage or disable cookies through your browser settings, though this may affect website functionality.<br><br>By using our store, you acknowledge and agree to this policy. If you have any questions or concerns about your privacy, please contact us.</p>
                </div>
-               <a class="btn toggle-modal w-100 drop-shadow" href="javascript:void(0);" data-remote="/tebex-privacy"><i class="fa-solid fa-square-arrow-up-right me-1"></i>Privacy Policy</a>
+               <a class="btn w-100 drop-shadow" href="/privacy-policy"><i class="fa-solid fa-square-arrow-up-right me-1"></i>Privacy Policy</a>
             </div>
          </div>
       </div>
    </div>
 </div>
-{% include "content_footer.html" %}
+{% include "footer.twig" %}
 {% endblock %}
